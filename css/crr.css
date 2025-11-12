@@ -45,12 +45,16 @@ li{
 /* Carrusel */
 .carousel-container {
   position: relative;
+   min-height: 280px;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   margin-bottom: 40px;
   margin-top: 50px;
+  display: flex;
+  align-items: center; /* 🔹 centra verticalmente las flechas */
+  justify-content: center;
 }
 
 .cards-wrapper {
@@ -69,14 +73,14 @@ li{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white; /* más visible */
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   z-index: 10;
 }
 
@@ -84,12 +88,12 @@ li{
   background-color: black;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 15px; }
+.next { right: 15px; }
 
 #form{
   background-color: lightsteelblue;
-  margin-top: 200px;
+  margin-top: 75px;
   margin-left: 800px;
   width: 500px;
   height: 400px;
@@ -130,11 +134,12 @@ html, body{
 
 }
 #map{
-  position: fixed;
+  position: absolute;
+  top: 1010px;
   bottom: 0;
-  left: 0;
-  width: 300px;
-  height: 200px;
+  left: 50px;
+  width:  600px;
+  height: 410px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -143,6 +148,18 @@ html, body{
 }
 .part{
   background-color: lightsteelblue;
-  height: 50vh;
-  
+  height: auto;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.part2{
+  background-color: rgb(54, 53, 53);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
