@@ -1,165 +1,218 @@
-body {
-  background: url() no-repeat center center fixed;
-  background-size: cover;
-  color: white;
+/* Reset / básicos */
+body, html {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-nav {
-  margin-bottom: 0 !important;
+/* NAVBAR estilo CFP24-like */
+.navbar {
+  padding: 1rem;
 }
 
-li{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-left: 155px;
-    text-align: justify;
-    font-size: large;
-}
-#nnav{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-#intro {
-  font-family: fantasy;
-  margin-top: 75px;
-  margin-bottom: 100px;
-  text-align: center;
-  color: black;
-}
-#tra{
-  color: black;
-  margin-left: 65px;
-  margin-bottom: 15px;
-  text-align: justify;
-  text-decoration: underline;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-#info{
- color: black;
-  margin-left: 100px;
-  margin-bottom: 50px;
-  text-align: justify;
-  font-size: larger;
+/* Home */
+.section-home {
+  background: #f5f5f5;
+  padding: 100px 0;
+  color: #333;
 }
 
-/* Carrusel */
+.section-home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-home p {
+  font-size: 1.2rem;
+}
+
+/* Trayectos / Carrusel */
+.section-trayectos {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
 .carousel-container {
   position: relative;
-   min-height: 280px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   overflow: hidden;
-  margin-bottom: 40px;
-  margin-top: 50px;
-  display: flex;
-  align-items: center; /* 🔹 centra verticalmente las flechas */
-  justify-content: center;
+  margin-top: 30px;
 }
 
 .cards-wrapper {
   display: flex;
-  transition: transform 0.5s ease;
-  margin: 0;
-  padding: 0;
+  transition: transform 0.4s ease;
+  width: max-content;
 }
 
-.card {
+.my-card {
   flex: 0 0 300px;
-  margin: 0 10px;
+  margin: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.my-card img {
+  width: 100%;
+  height: auto;
+}
+
+.my-card .card-body {
+  padding: 1rem;
 }
 
 .nav-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white; /* más visible */
+  background: rgba(0, 0, 0, 0.5);
   border: none;
-  border-radius: 50%;
+  color: white;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 20px;
   z-index: 10;
 }
 
-.nav-btn:hover {
-  background-color: black;
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Form / Contacto */
+.section-form {
+  background: #d1e7f0; /* un color suave inspirando institucional / educativo */
+  padding: 60px 0;
 }
 
-.prev { left: 15px; }
-.next { right: 15px; }
+.form-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-#form{
-  background-color: lightsteelblue;
-  margin-top: 75px;
-  margin-left: 800px;
-  width: 500px;
-  height: 400px;
-  color: black;
-border-radius: 10px;
-margin-bottom: 40px;
+#map {
+  width: 450px;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
 }
-.dropdown{
-  position: relative;
-  display: inline-block;
+
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.dropdown-menu{
+
+.contact-form h3 {
+  margin-bottom: 1rem;
+}
+
+/* Spa páginas blancas */
+.paginablanca {
   display: none;
-  position:fixed;
-  top: 100%;
-left: 0;
-  width: 300px;
-  height: 275px;
-  background-color: black;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  overflow: hidden;
+  padding: 80px;
+  background: #ffffff;
+  color: #333;
+  min-height: 80vh;
 }
-.dropdown:hover .dropdown-menu{
+
+:target.paginablanca {
   display: block;
 }
-.dropdown a{
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-html, body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
 
+/* Mostrar la sección “home” cuando no hay hash */
+body:not(:has(:target)) #home {
+  display: block;
 }
-#map{
-  position: absolute;
-  top: 1010px;
-  bottom: 0;
-  left: 50px;
-  width:  600px;
-  height: 410px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  z-index: 1000;
+li{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
 }
-.part{
-  background-color: lightsteelblue;
-  height: auto;
+#trayectos{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+#home{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  font-size: x-large;
 }
-.part2{
-  background-color: rgb(54, 53, 53);
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+#page1{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+#page2{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page3{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page4{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page5{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page6{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page7{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page8{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page9{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page10{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+#page11{
+   background: lightsteelblue;
+  padding: 30px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
