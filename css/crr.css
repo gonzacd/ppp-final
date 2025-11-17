@@ -112,6 +112,19 @@ body, html {
   margin-bottom: 1rem;
 }
 
+/* Estilo para el nuevo apartado de acceso Admin */
+.section-admin-access {
+    background-color: #343a40; /* Fondo oscuro para destacar */
+    color: white;
+    border-top: 5px solid #0d6efd; /* Borde azul de Bootstrap */
+    padding: 30px 0 !important; /* Más pequeño que el p-5 */
+}
+.section-admin-access a.btn {
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+
 /* Spa páginas blancas */
 .paginablanca {
   display: none;
@@ -149,70 +162,10 @@ li{
   color: black;
   font-size: x-large;
 }
-#page1{
+/* Reutilizamos el estilo paginablanca para los IDs dinámicos */
+#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
    background: lightsteelblue;
   padding: 30px;
   flex: 1;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-#page2{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page3{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page4{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page5{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page6{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page7{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page8{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page9{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page10{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-#page11{
-   background: lightsteelblue;
-  padding: 30px;
-  flex: 1;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
